@@ -1,0 +1,9 @@
+.NumberControls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.NumberControls > input {
+  width: 50%;
+}

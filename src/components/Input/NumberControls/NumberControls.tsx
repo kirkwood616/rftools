@@ -1,5 +1,5 @@
-import { AddSubtract } from "components/Button";
-import styles from "../Input.module.css";
+import { AddSubtract } from "components/Buttons";
+import styles from "./NumberControls.module.css";
 
 interface NumberControlsProps {
   children: React.ReactNode;

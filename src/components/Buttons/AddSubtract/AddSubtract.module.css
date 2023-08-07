@@ -1,5 +1,4 @@
-.AddSubtract__add,
-.AddSubtract__subtract {
+.AddSubtract {
   border-radius: 50%;
   border: none;
   height: 2.5rem;
@@ -7,15 +6,8 @@
   position: relative;
   width: 2.5rem;
 }
-.AddSubtract__add {
-  background-color: green;
-}
-.AddSubtract__subtract {
-  background-color: red;
-}
 
-.AddSubtract__add span,
-.AddSubtract__subtract span {
+.AddSubtract span {
   background-color: var(--background-color);
   border-radius: 2px;
   bottom: 0;
@@ -27,6 +19,14 @@
   top: 0;
   width: 60%;
 }
-.AddSubtract__add span:last-of-type {
+.AddSubtract span:nth-child(2) {
   transform: rotate(90deg);
+}
+
+.add {
+  background-color: var(--button_primary);
+}
+
+.subtract {
+  background-color: var(--button_danger);
 }
