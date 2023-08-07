@@ -1,9 +1,12 @@
 :root {
   --background-color: #242424;
   --green: #55be4d;
-  --red: #c8102e;
+  --red: red;
   --blue: #0047bb;
   --cream: #ffffe4;
+  --button_primary: var(--green);
+  --button_secondary: var(--blue);
+  --button_danger: var(--red);
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1;
