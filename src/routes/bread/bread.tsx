@@ -1,19 +1,19 @@
 import { Button } from "components/Buttons";
+import { Field } from "components/Field";
+import { Fieldset } from "components/Fieldset";
 import Form from "components/Form/Form";
-import { NumberControls, WholeNumber } from "components/Input";
-import { useState } from "react";
+import { WholeNumber } from "components/Input";
+import { NumberObject } from "types/Objects";
 import styles from "./bread.module.css";
 
 export default function Bread() {
-  const [value, setValue] = useState<number>(0);
-
-  function onSubmit(e: React.FormEvent) {
+  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    console.log("submit");
-  }
+    const formData: FormData = new FormData(e.currentTarget);
+    const formDataObj: NumberObject = {};
+    formData.forEach((value, key) => (formDataObj[key] = Number(value)));
 
-  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
-    setValue((prev) => (Number(e.target.validity.valid) ? Number(e.target.value) : prev));
+    console.log(formDataObj);
   }
 
   return (
@@ -21,10 +21,17 @@ export default function Bread() {
       <h1>BREAD ORDER</h1>
       <h2>Enter Current Stock Quantities</h2>
       <Form onSubmit={onSubmit}>
-        <label htmlFor="NAME">NAME</label>
-        <NumberControls>
-          <WholeNumber label={"NAME"} name={"name"} onChange={(e) => handleChange(e)} value={value} />
-        </NumberControls>
+        <Fieldset legend={"BREAD"}>
+          <Field descriptor="( Unit )">
+            <label htmlFor="NAME">NAME</label>
+            <WholeNumber label={"NAME"} name={"name"} withControls />
+          </Field>
+
+          <Field descriptor="( Unit )">
+            <label htmlFor="NAME2">NAME2</label>
+            <WholeNumber label={"NAME2"} name={"name2"} withControls />
+          </Field>
+        </Fieldset>
         <Button type="submit" text="Submit" color="primary" />
       </Form>
     </div>
