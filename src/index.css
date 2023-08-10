@@ -1,12 +1,24 @@
 :root {
-  --background-color: #242424;
+  --blue-gray: #213547;
+  --dark-gray-1: #242424;
+  --dark-gray-2: #2e2e2e;
+  --gray: gray;
+  --light-gray: lightgray;
   --green: #55be4d;
   --red: red;
   --blue: #0047bb;
   --cream: #ffffe4;
-  --button_primary: var(--green);
-  --button_secondary: var(--blue);
-  --button_danger: var(--red);
+
+  --background-color: var(--dark-gray-1);
+  --background-accent: var(--dark-gray-2);
+  --button--primary: var(--green);
+  --button--secondary: var(--blue);
+  --button--danger: var(--red);
+
+  --border-radius--small: 0.25rem;
+  --border-radius--medium: 0.5rem;
+  --border-radius--oval: 5rem;
+  --border-radius--circle: 50%;
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1;
@@ -32,8 +44,8 @@
 }
 
 a {
-  font-weight: 500;
   color: #646cff;
+  font-weight: 500;
   text-decoration: inherit;
 }
 a:hover {
@@ -41,11 +53,11 @@ a:hover {
 }
 
 body {
-  margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 280px;
+  margin: 0;
   min-height: 100vh;
+  min-width: 280px;
+  place-items: center;
 }
 
 h1 {
@@ -57,9 +69,27 @@ button {
   cursor: pointer;
 }
 
+input,
+textarea {
+  background-color: rgb(30, 30, 30);
+  border-radius: var(--border-radius--small);
+  border: 1px solid var(--gray);
+}
+input:focus,
+textarea:focus {
+  border: 1px solid var(--blue);
+  outline: 1px solid var(--blue);
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    --background-color: #ffffff;
+    --background-accent: #ffffff;
+    --background-color: var(--light-gray);
+  }
+
+  input,
+  textarea {
+    background-color: white;
   }
 }

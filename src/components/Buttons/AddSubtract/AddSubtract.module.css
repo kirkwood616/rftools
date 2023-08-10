@@ -1,5 +1,5 @@
 .AddSubtract {
-  border-radius: 50%;
+  border-radius: var(--border-radius--circle);
   border: none;
   height: 2.5rem;
   margin: 0 1rem;
@@ -8,7 +8,7 @@
 }
 
 .AddSubtract span {
-  background-color: var(--background-color);
+  background-color: var(--background-accent);
   border-radius: 2px;
   bottom: 0;
   height: 0.5rem;
@@ -24,9 +24,9 @@
 }
 
 .add {
-  background-color: var(--button_primary);
+  background-color: var(--button--primary);
 }
 
 .subtract {
-  background-color: var(--button_danger);
+  background-color: var(--button--danger);
 }
