@@ -5,5 +5,7 @@
 }
 
 .Field label {
+  font-size: 1.25rem;
   font-weight: bold;
+  margin-bottom: 0.25rem;
 }

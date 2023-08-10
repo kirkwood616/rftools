@@ -1,3 +1,7 @@
 .Bread {
   text-align: center;
 }
+
+.Bread button[type="submit"] {
+  width: 75%;
+}

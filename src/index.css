@@ -6,7 +6,7 @@
   --light-gray: lightgray;
   --green: #55be4d;
   --red: red;
-  --blue: #0047bb;
+  --blue: #2d61b5;
   --cream: #ffffe4;
 
   --background-color: var(--dark-gray-1);
@@ -74,6 +74,8 @@ textarea {
   background-color: rgb(30, 30, 30);
   border-radius: var(--border-radius--small);
   border: 1px solid var(--gray);
+  font-size: 1.25rem;
+  min-height: 2.25rem;
 }
 input:focus,
 textarea:focus {
