@@ -1,7 +1,7 @@
 import { Button } from "components/Buttons";
 import { Field } from "components/Field";
 import { Fieldset } from "components/Fieldset";
-import Form from "components/Form/Form";
+import { Form } from "components/Form";
 import { WholeNumber } from "components/Input";
 import { NumberObject } from "types/Objects";
 import styles from "./bread.module.css";
